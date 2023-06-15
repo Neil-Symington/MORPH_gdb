@@ -1,9 +1,9 @@
 import geopandas as gpd
 import os
 
-infile = r"C:\Users\u77932\Documents\MORPH\data\boreholes\compilation\databases\MORPH_Boreholes.gpkg"
+infile = r"..\database\MORPH_Boreholes.gpkg"
 
-outdir = "csv"
+outdir = r"..\csv"
 
 gdf = gpd.read_file(infile, layer = "MORPH_Bores")
 gdf = gdf.sort_values(by = 'MORPH_ID')
@@ -14,3 +14,4 @@ for lyr in ["MORPH_LithologyLog", "MORPH_BoreLog", "MORPH_ConstructionLog"]:
     gdf = gdf.sort_values(by = ['MORPH_ID', "FromDepth"])
     gdf.to_csv(os.path.join(outdir, ".".join([lyr, "csv"])),
                index = False)
+
