@@ -1,7 +1,7 @@
 import os
 import arcpy
 
-outdir = r"databases"
+outdir = r"../databases"
 outfile = "MORPH_boreholes.gdb"
 arcpy.CreateFileGDB_management(outdir, outfile)
 
