@@ -32,7 +32,7 @@ bl_schema = {'properties': OrderedDict([('MORPH_ID', 'int'), ('HydroCode', 'str:
 ll_schema = {'properties': OrderedDict([('MORPH_ID', 'int'), ('HydroCode', 'str:30'), ('FromDepth', 'float'), ('ToDepth', 'float'),
                                         ('TopElev', 'float'), ('BottomElev', 'float'), ('GALithType', 'str:50'),
                                         ('MajorLithCode', 'str:50'),('MinorLithCode', 'str:50'), ('Description', 'str:255'),
-                                        ('Source', 'str:100'), ('LogType', 'int'), ('isBasement','int')
+                                        ('Source', 'str:100'), ('LogType', 'int'),
                                         ]), 'geometry': 'None'}
 
 
