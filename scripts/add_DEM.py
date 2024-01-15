@@ -2,8 +2,7 @@ import geopandas as gpd
 import pandas as pd
 import os, sys
 import rasterio
-from pyproj import Transformer
-
+import numpy as np
 
 # if running locally
 os.chdir('scripts')
@@ -44,5 +43,8 @@ for index, row in gdf_noDEM.iterrows():
 
 mb_schema = get_schema("MORPH_Bores")
 cols = [c for c in mb_schema['properties']] + ['geometry']
+
+gdf['Completed'] = ''
+gdf['Yield_L/s'] = np.nan
 
 gdf[cols].to_file(infile, layer='MORPH_Bores', driver="GPKG", schema = mb_schema)

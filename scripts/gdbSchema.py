@@ -4,8 +4,8 @@ mb_schema = {'properties': OrderedDict([('MORPH_ID', 'int'), ('BoreName', 'str:2
                                         ('HydroID', 'int'), ('HydroCode', 'str:30'), ('StateBoreID', 'str:50'),
                                         ('StatePipeID', 'str:30'), ('StateTerritory', 'str:6'), ('Agency', 'int'),
                                         ('WCode', 'int'), ('BoreDepth', 'float'), ('DrilledDepth', 'float'),
-                                        ('Status', 'str:30'), ('DrilledDate', 'datetime'), ('Latitude', 'float'),
-                                        ('Longitude', 'float'), ('Easting', 'float'), ('Northing', 'float'),
+                                        ('Status', 'str:30'), ('Completed', 'str:20'), ('DrilledDate', 'datetime'),
+                                        ('Latitude', 'float'), ('Longitude', 'float'), ('Easting', 'float'), ('Northing', 'float'),
                                         ('Projection', 'int'), ('ProjectionZone', 'int'), ('CoordMethod', 'str:30'),
                                         ('HeightDatum', 'str:30'), ('GALandElev', 'float'), ('GALandElevMethod', 'str:30'),
                                         ('RefElev', 'float'), ('RefElevDesc', 'str:30'), ('RefElevMethod', 'str:30'),
@@ -13,7 +13,7 @@ mb_schema = {'properties': OrderedDict([('MORPH_ID', 'int'), ('BoreName', 'str:2
                                         ('basementRockType', 'str:50'), ('basementAgeTo', "str:50"), ('surfaceGeol', "str:80"),
                                         ('surfaceRepAge', "str:30"),('surfaceLith', "str:50"),('FTypeClass', 'str:50'),
                                         ('ConstructionLog', 'int'), ('LithLog', 'int'), ('HydrostratLog', 'int'),
-                                        ('HydroChem', 'int'), ("waterLevel", "int"), ('GAHydroChem', 'int'),
+                                        ('HydroChem', 'int'), ("waterLevel", "int"), ('GAHydroChem', 'int'), ('Yield_L/s', 'float'),
                                         ('AddedBy', 'str:20'), ('Comment', 'str:100'), ('Source', 'str:20'),
                                         ("QAQCd_By", 'str:20'), ('QAQC_date', 'datetime')]), 'geometry': 'Point'}
 
