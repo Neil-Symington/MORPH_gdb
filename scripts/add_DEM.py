@@ -18,10 +18,19 @@ lon_mask = pd.isnull(gdf.Longitude)
 
 gdf_noLong = gdf[lon_mask]
 
-for index, row in gdf_noLong.to_crs("4283").iterrows():
+for index, row in gdf_noLong.to_crs("epsg:4283").iterrows():
     lon, lat = row.geometry.x, row.geometry.y
     gdf.at[index, 'Longitude'] = lon
     gdf.at[index, 'Latitude'] = lat
+
+easting_mask = pd.isnull(gdf.Easting)
+
+gdf_noEast = gdf[easting_mask]
+
+for index, row in gdf_noEast.to_crs("epsg:28352").iterrows():
+    x, y = row.geometry.x, row.geometry.y
+    gdf.at[index, 'Easting'] = x
+    gdf.at[index, 'Northing'] = y
 
 mask = pd.isnull(gdf.GALandElev)
 
