@@ -1,6 +1,6 @@
 from collections import OrderedDict
 
-mb_schema = {'properties': OrderedDict([('MORPH_ID', 'int'), ('BoreName', 'str:200'), ('BoreReport', 'str:200'),
+mb_schema = {'properties': OrderedDict([('MORPH_ID', 'int'), ('BoreName', 'str:200'), ('ReportLabel', 'str:30'), ('BoreReport', 'str:200'),
                                         ('HydroID', 'int'), ('HydroCode', 'str:30'), ('StateBoreID', 'str:50'),
                                         ('StatePipeID', 'str:30'), ('StateTerritory', 'str:6'), ('Agency', 'int'),
                                         ('WCode', 'int'), ('BoreDepth', 'float'), ('DrilledDepth', 'float'),
