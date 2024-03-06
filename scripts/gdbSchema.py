@@ -4,7 +4,7 @@ mb_schema = {'properties': OrderedDict([('MORPH_ID', 'int'), ('BoreName', 'str:2
                                         ('HydroID', 'int'), ('HydroCode', 'str:30'), ('StateBoreID', 'str:50'),
                                         ('StatePipeID', 'str:30'), ('StateTerritory', 'str:6'), ('Agency', 'int'),
                                         ('WCode', 'int'), ('BoreDepth', 'float'), ('DrilledDepth', 'float'),
-                                        ('Status', 'str:30'), ('Completed', 'str:20'), ('DrilledDate', 'datetime'),
+                                        ('Status', 'str:30'), ('Completed', 'str:20'), ('DrilledDate', 'date'),
                                         ('Latitude', 'float'), ('Longitude', 'float'), ('Easting', 'float'), ('Northing', 'float'),
                                         ('Projection', 'int'), ('ProjectionZone', 'int'), ('CoordMethod', 'str:30'),
                                         ('HeightDatum', 'str:30'), ('GALandElev', 'float'), ('GALandElevMethod', 'str:30'),
