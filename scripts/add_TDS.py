@@ -23,4 +23,4 @@ gdf_merged.rename(columns = {'TDSc_mg_L': 'TDS_mg/L'}, inplace = True)
 mb_schema = get_schema("MORPH_Bores")
 cols = [c for c in mb_schema['properties']] + ['geometry']
 
-#gdf_merged[cols].to_file(infile, layer='MORPH_Bores', driver="GPKG", schema = mb_schema)
+gdf_merged[cols].to_file(infile, layer='MORPH_Bores', driver="GPKG", schema = mb_schema)
