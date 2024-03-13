@@ -14,7 +14,7 @@ mb_schema = {'properties': OrderedDict([('MORPH_ID', 'int'), ('BoreName', 'str:2
                                         ('surfaceRepAge', "str:30"),('surfaceLith', "str:50"),('FTypeClass', 'str:50'),
                                         ('ConstructionLog', 'int'), ('LithLog', 'int'), ('HydrostratLog', 'int'),
                                         ('HydroChem', 'int'), ("waterLevel", "int"), ('GAHydroChem', 'int'),
-                                        ('Yield_L/s', 'float'), ('TDS_mg/L', 'float'), ('Community', 'str:20'),
+                                        ('Yield_Ls-1', 'float'), ('TDS_mgL-1', 'float'), ('Community', 'str:20'),
                                         ('AddedBy', 'str:20'), ('Comment', 'str:100'), ('Source', 'str:20'),
                                         ("QAQCd_By", 'str:20'), ('QAQC_date', 'datetime')]), 'geometry': 'Point'}
 

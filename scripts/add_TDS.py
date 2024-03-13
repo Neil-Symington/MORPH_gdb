@@ -18,7 +18,15 @@ df_tds = pd.read_csv(r"C:\Users\u77932\Documents\MORPH\data\boreholes\compilatio
 gdf_merged = gdf.merge(df_tds[['MORPHID','TDSc_mg_L']],
                        left_on = 'MORPH_ID', right_on = 'MORPHID', how = 'left')
 
-gdf_merged.rename(columns = {'TDSc_mg_L': 'TDS_mg/L'}, inplace = True)
+# do a quick compare
+mask = np.all(pd.isnull(gdf_merged[['TDSc_mg_L', 'TDS_mgL-1']]), axis = 1)
+
+gdf_compare = gdf_merged[~mask][['TDSc_mg_L', 'TDS_mgL-1']]
+
+# replace the columnn
+gdf_merged.drop('TDS_mgL-1', axis = 1,inplace = True)
+gdf_merged.rename(columns = {'TDSc_mg_L': 'TDS_mgL-1'}, inplace = True)
+
 
 mb_schema = get_schema("MORPH_Bores")
 cols = [c for c in mb_schema['properties']] + ['geometry']
